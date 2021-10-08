@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    height: 10%;
+    text-align: center;
+    box-shadow: 0px 15px 20px -10px rgba(0,0,0,0.3);
+
+    &__logo {
+        width: 50%;
+        margin-right: 25%;
+        margin-left: auto;
+        height: 75%;
+    }
+
+    a {
+        width: 20%;
+        margin-right: 5%;
+    }
+
+    &__prev {
+        color: #353535;
+        font-size: 1.5em !important;
+    }
+}

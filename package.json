@@ -1,0 +1,16 @@
+{
+  "name": "projet3",
+  "version": "1.0.0",
+  "description": "'projet-3'",
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^1.41.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "author": "Antoine Becuwe",
+  "license": "ISC"
+}

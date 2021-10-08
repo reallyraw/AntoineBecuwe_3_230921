@@ -1,0 +1,93 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    object-fit: cover;
+    margin-bottom: 5% !important;
+    border-radius: 25px;
+    background-color: white;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    @media (min-width: 480px) {
+        height: 500px;
+    }
+
+    &:hover {
+        filter: brightness(90%);
+    }
+
+    &__top {
+        height: 70%;
+        position: relative;
+        overflow: hidden;
+
+        &__image {
+            object-fit: cover;
+            position: absolute;
+            top: -9999px;
+            bottom: -9999px;
+            left: -9999px;
+            right: -9999px;
+            margin: auto;
+            width: 100%;
+            height: auto;
+        }
+
+        &--new {
+            position: absolute;
+            right: 5%;
+            top: 10%;
+            background-color: #99e2d0;
+            border-radius: 5px;
+            padding: 2%;
+            color: #008766;
+            font-size: 1em;
+            font-family: $roboto;
+            font-weight: 700;
+            @media (min-width: 480px) {
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+
+        &__desc {
+            padding: 2% 5%;
+            font-size: 0.8em;
+            font-family: $roboto;
+            line-height: 1em;
+            @media (min-width: 480px) {
+                font-size: 1em;
+                line-height: 1.5em;
+            }
+
+            h2 {
+                font-weight: bold;
+            }
+        }
+
+        &__fav {
+            width: 20%;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+
+            i {
+                transition: all 0.4s ease;
+                font-size: 2em !important;
+                @media (min-width: 480px) {
+                    font-size: 3em !important;
+                }
+
+                &:hover {
+                    font-weight: 900 !important;
+                    color: rgba(147,86,220,1);
+                }
+            }
+        }
+    }
+}

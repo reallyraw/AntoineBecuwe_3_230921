@@ -1,0 +1,85 @@
+@-webkit-keyframes fadeInUp {
+    0% {
+       opacity: 0;
+       -webkit-transform: translateY(20px);
+    }
+    100% {
+       opacity: 1;
+       -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+       opacity: 0;
+       transform: translateY(20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+}
+
+
+@keyframes loader {
+   0% {
+      z-index: 1000;
+      visibility: visible;
+      opacity: 1;
+   }
+
+   100% {
+      opacity: 0;
+   }
+}
+
+@-webkit-keyframes loader {
+   0% {
+      z-index: 1000;
+      opacity: 1;
+      visibility: visible;
+   }
+
+   100% {
+      opacity: 0;
+   }
+}
+
+@-webkit-keyframes spin {
+   0% {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+      transform-origin: center;
+      z-index: 1500;
+   }
+   100% {
+      -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+      transform-origin: center;
+      z-index: 0;
+   }
+}
+@keyframes spin {
+   0% {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+      transform-origin: center;
+      z-index: 1500;
+   }
+   100% {
+      -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+      transform-origin: center;
+      z-index: 0;
+   }
+}
+
+// 1 /  Un position fixed sur l'ensemble de la page avec une opacité à 0.6
+// 2 / à l'intérieur un spinner qui rotate
+// 3 / durée animation 2s
+// 4 / opacité 0 z-index:-1 ou bien visibility: hidden
+// 5 /// PAR OU COMMENCER + OU LE PLACER -> voir lundi
