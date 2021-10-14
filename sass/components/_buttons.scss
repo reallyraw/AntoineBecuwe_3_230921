@@ -22,16 +22,11 @@
     text-align: center;
     transition: all 0.7s ease;
 
-    @media (min-width: 480px) {
-        font-size: 1.5em;
-    }
-    
     &:hover {
         filter: brightness(120%);
         text-decoration: none;
         -webkit-box-shadow: 0 15px 30px 0 black;
         -moz-box-shadow: 0 15px 30px 0 black;
         box-shadow: 0 15px 30px 0 black;
-        
     }
 }

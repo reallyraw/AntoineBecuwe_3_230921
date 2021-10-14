@@ -1,5 +1,5 @@
 .menu-item {
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 0 1px 10px 0 #9D9D9D;
     display: flex;
     margin: 5% 0;
@@ -29,8 +29,12 @@
 
     &__text {
         overflow: hidden;
-        padding: 1% 0 1% 4%;
+        padding: 4% 0 4% 4%;
         margin-right: auto;
+
+        @include tablet {
+            padding: 2% 0 2% 2%;
+        }
 
         &__title {
             font-size: 1em;
@@ -39,9 +43,6 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
-            @media (min-width: 480px) {
-            font-size: 1.5em;
-            }
         }
 
         &__sub {
@@ -49,9 +50,6 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
-            @media (min-width: 480px) {
-            font-size: 1.2em;
-            }
         }
     }
 
@@ -60,14 +58,16 @@
         flex-direction: column;
         justify-content: flex-end;
         margin-right: 2%;
+        padding-bottom: 4%;
+
+        @include tablet {
+            padding-bottom: 2%;
+        }
 
         &__tag {
             font-size: 0.75em;
             font-weight: bold;
             color: #353535;
-            @media (min-width: 480px) {
-            font-size: 1.2em;
-            }
         }
     }
 
@@ -86,9 +86,6 @@
             color: white;
             transition: all 0.7s ease;
             font-size: 1.5em !important;
-            @media (min-width: 480px) {
-            font-size: 2.5em !important;
-        }
         }
     }
 }

@@ -5,24 +5,25 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    padding: 2%;
+    padding: 4%;
     color: #353535;
     height: 5%;
+    @include tablet {
+        padding: 2%;
+    }
+
+    @include xl-desktop {
+        padding: 1%;
+    }
 
     &__icon {
         padding: 0 2%;
         font-size: 1em !important;
-        @media (min-width: 480px) {
-            font-size: 2em !important;
-        }
     }
 
     &__text {
         font-weight: 700;
         font-size: 1em;
         font-family: $roboto;
-        @media (min-width: 480px) {
-            font-size: 1.5em;
-        }
     }
 }

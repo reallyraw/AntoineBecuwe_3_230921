@@ -6,3 +6,27 @@
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
 }
+
+// responsive
+
+
+// Tablet
+@mixin tablet {
+    @media (min-width: 480px) {
+        @content;
+    }
+}
+
+// Desktop
+@mixin desktop {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+// Extra large devices
+@mixin xl-desktop {
+        @media (min-width: 1800px) {
+            @content;
+    }
+}

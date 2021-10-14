@@ -1,8 +1,18 @@
 .hero {
     background-color: #F6f6f6;
     margin: auto;
-    padding: 10%;
+    padding: 10% 5%;
     text-align: center;
+    @include tablet {
+        padding: 2% 10%;
+    }
+
+    @include xl-desktop {
+        padding: 1% 10%;
+        h1 {
+            margin-bottom: 2%;
+        }
+    }
 
     h2 {
         font-family: $roboto;
@@ -10,13 +20,11 @@
         font-weight: 100;
         margin-bottom: 10%;
         color: lighten($color: #000000, $amount: 30%);
-    }
-
-    @media (min-width: 480px) {
-        padding: 5% 20%;
-
-        h1 {
-            font-size: 2.5em;
+        @include tablet {
+            margin-bottom: 5%;
+        }
+        @include xl-desktop {
+            margin-bottom: 2%;
         }
     }
 }
@@ -24,8 +32,15 @@
 .restaurant-hero {
     height: 30%;
     overflow: hidden;
-    @media (min-width: 480px) {
+    max-height: 500px;
+    @include tablet {
         height: 75%;
+    }
+
+    @include xl-desktop {
+        width: 50%;
+        margin: auto;
+        max-height: 600px;
     }
 
     &__image {

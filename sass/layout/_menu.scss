@@ -1,29 +1,41 @@
 .menu {
-    border-radius: 50px;
+    border-radius: 30px;
     overflow: hidden;
     background-color: white;
     position: relative;
     margin-top: -15%;
-    padding: 2% 5%;
-    @media (min-width: 480px) {
-        border-radius: 75px;
+    padding: 10% 5%;
+
+    @include tablet {
+        padding: 5%;
+    }
+    @include desktop {
+        padding: 5% 20% 0;
         margin-top: -10%;
-        padding: 5% 10%;
     }
 
+    @include xl-desktop {
+        width: 30%;
+        margin: -5% auto 0;
+        padding: 2% 10% 0;
+        border-radius: 120px;
+    }
     &__top {
         display: flex;
         align-content: center;
         justify-content: space-between;
-        align-items: center;
-        margin-bottom: 10%;
+        margin-bottom: 5%;
+        @include xl-desktop {
+            margin-bottom: 0;
+        }
+
+        @include tablet {
+            margin-bottom: 2%;
+        }
 
         &__title {
             font-family: $shrikhand;
             font-size: 2em;
-            @media (min-width: 480px) {
-                font-size: 3em;
-            }
         }
 
         &__fav {
@@ -32,9 +44,6 @@
             i {
                 font-size: 2em !important;
                 transition: all 0.4s ease;
-                @media (min-width: 480px) {
-                    font-size: 3em !important;
-                }
 
                 &:hover {
                     font-weight: 900 !important;
@@ -47,29 +56,25 @@
     &__subpart {
         margin-bottom: 10%;
         @include animation;
-
-        @media (min-width: 480px) {
-            padding: 0 10%;
+        @include tablet {
+            margin-bottom: 5%;
         }
 
         &__title {
             font-family: $roboto;
-            font-size: 1.2em;
+            font-size: 1em;
             -webkit-animation-duration: 2s;
             animation-duration: 2s;
             -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
             -webkit-animation-name: fadeInUp;
             animation-name: fadeInUp;
-            @media (min-width: 480px) {
-                font-size: 1.5em;
-            }
         }
 
         &__hr {
             width: 10%;
             border-top: 4px solid $color-third;
-            margin: 0;
+            margin: 2% 0;
         }
     }
 

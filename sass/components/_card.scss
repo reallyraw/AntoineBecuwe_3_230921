@@ -1,15 +1,21 @@
 .card {
     display: flex;
     flex-direction: column;
-    height: 40%;
+    height: 250px;
     object-fit: cover;
     margin-bottom: 5% !important;
-    border-radius: 25px;
+    border-radius: 15px;
     background-color: white;
     overflow: hidden;
     transition: all 0.5s ease;
-    @media (min-width: 480px) {
-        height: 500px;
+    @include tablet {
+        height: 300px;
+    }
+
+    @include desktop {
+        height: 250px;
+        margin: 2% !important;
+        width: 46%;
     }
 
     &:hover {
@@ -20,6 +26,12 @@
         height: 70%;
         position: relative;
         overflow: hidden;
+        @include tablet {
+            height: 80%;
+        }
+        @include tablet {
+            height: 75%;
+        }
 
         &__image {
             object-fit: cover;
@@ -35,8 +47,8 @@
 
         &--new {
             position: absolute;
-            right: 5%;
-            top: 10%;
+            right: 4%;
+            top: 8%;
             background-color: #99e2d0;
             border-radius: 5px;
             padding: 2%;
@@ -44,8 +56,8 @@
             font-size: 1em;
             font-family: $roboto;
             font-weight: 700;
-            @media (min-width: 480px) {
-                font-size: 1.5em;
+            @include desktop {
+                font-size: 0.8em;
             }
         }
     }
@@ -55,13 +67,20 @@
         justify-content: space-between;
 
         &__desc {
-            padding: 2% 5%;
-            font-size: 0.8em;
+            padding: 4% 5%;
+            font-size: 1.2em;
             font-family: $roboto;
-            line-height: 1em;
-            @media (min-width: 480px) {
+            line-height: 1.2em;
+            @include tablet {
                 font-size: 1em;
                 line-height: 1.5em;
+                padding: 2% 5%;
+            }
+
+            @include desktop {
+                padding: 4% 5%;
+                font-size: 0.9em;
+                line-height: 1.2em;
             }
 
             h2 {
@@ -79,15 +98,26 @@
             i {
                 transition: all 0.4s ease;
                 font-size: 2em !important;
-                @media (min-width: 480px) {
-                    font-size: 3em !important;
+                @include desktop {
+                    font-size: 1.5em !important;
                 }
 
                 &:hover {
                     font-weight: 900 !important;
-                    color: rgba(147,86,220,1);
+                    color: #9356DC;
                 }
             }
         }
+    }
+}
+
+#cards {
+    @include desktop {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @include xl-desktop {
+        padding: 0 20%;
     }
 }
