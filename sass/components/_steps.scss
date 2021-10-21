@@ -31,12 +31,12 @@
         transition: all 0.5s ease;
 
         @include tablet {
-            padding: 3%;
+            padding: 3% 0;
             margin: 5%;
         }
 
         @include xl-desktop {
-            padding: 1%;
+            padding: 1% 0;
             margin: 3% 25%;
         }
 
@@ -59,7 +59,7 @@
             border-radius: 100px;
             font-size: 1em;
             @include tablet {
-                left: -25px;
+                left: -15px;
                 height: 30px;
                 width: 30px;
             }

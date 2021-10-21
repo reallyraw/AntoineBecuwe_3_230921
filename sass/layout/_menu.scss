@@ -1,7 +1,7 @@
 .menu {
     border-radius: 30px;
     overflow: hidden;
-    background-color: white;
+    background-color: #F2F2F2;
     position: relative;
     margin-top: -15%;
     padding: 10% 5%;
@@ -16,8 +16,8 @@
 
     @include xl-desktop {
         width: 30%;
-        margin: -5% auto 0;
-        padding: 2% 10% 0;
+        margin-top: -5%;
+        padding: 2% 35% 0;
         border-radius: 120px;
     }
     &__top {

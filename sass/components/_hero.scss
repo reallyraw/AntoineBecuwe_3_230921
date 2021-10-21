@@ -27,26 +27,26 @@
             margin-bottom: 2%;
         }
     }
-}
 
-.restaurant-hero {
-    height: 30%;
-    overflow: hidden;
-    max-height: 500px;
-    @include tablet {
-        height: 75%;
-    }
+    &--restaurant {
+        height: 30%;
+        overflow: hidden;
+        max-height: 500px;
+        padding: 0;
+        @include tablet {
+            height: 75%;
+        }
 
-    @include xl-desktop {
-        width: 50%;
-        margin: auto;
-        max-height: 600px;
-    }
+        @include xl-desktop {
+            margin: auto;
+            max-height: 600px;
+        }
 
-    &__image {
-        object-fit: cover;
-        margin: auto;
-        width: 100%;
-        height: auto;
+        &__image {
+            object-fit: cover;
+            margin: auto;
+            width: 100%;
+            height: auto;
+        }
     }
 }
